@@ -13,20 +13,20 @@ Examples of new rooting technologies are those that are extremely difficult to d
 Detecting these new rooting technologies is RootbeerFresh's ultimate goal.
 
 
-*[Google Play app]*
+[Google Play app]<br/>
 <a href='https://play.google.com/store/apps/details?id=com.kimchangyoun.rootbeerFresh.sample&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
-*[Development environment]*
+[Development environment]<br/>
 Builds on the latest Android Studio 3.3 and NDK.
 
-*[contribute]*
+[contribute]<br/>
 If you have a new and better creative way, please leave your PR in any case.
 
-*[Disclaimer and limitations]*
+[Disclaimer and limitations]<br/>
 Sometimes the detection method of RootbeerFresh may not work correctly.
 When RootbeerFresh is not sure if the device is rooted, it displays a '*' next to the rooted detection message.
 
-[Library]
+[Library]<br/>
 RootbeerFresh comes with a library.
 You can use the library in the following ways:
 
@@ -48,8 +48,7 @@ If you do not want to detect the BusyBox, use the following example code.
 rootBeer.isRootedWithoutBusyBoxCheck()
 ```
 
-*[Dependency]*
-
+[Dependency]<br/>
 Available on [maven central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22rootbeerFresh-lib%22), to include using Gradle just add the following:
 
 ```java
@@ -60,7 +59,7 @@ dependencies {
 
 Or use this [Jitpack.io link](https://jitpack.io/#kimchangyoun/rootbeerFresh)
 
-*[Licence]*
+[Licence]<br/>
 Apache License, Version 2.0
 
     Copyright (C) 2019, ChangYoun Kim
