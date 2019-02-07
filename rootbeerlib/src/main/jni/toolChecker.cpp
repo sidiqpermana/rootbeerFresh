@@ -55,7 +55,7 @@ static int DEBUG = 1;
  * 	bool - true to log debug messages
  *
  *****************************************************************************/
-void Java_com_kimchangyoun_rootbeer_RootBeerNative_setLogDebugMessages( JNIEnv* env, jobject thiz, jboolean debug)
+void Java_com_kimchangyoun_rootbeerFresh_RootBeerNative_setLogDebugMessages( JNIEnv* env, jobject thiz, jboolean debug)
 {
   if (debug){
     DEBUG = 1;
@@ -197,7 +197,7 @@ int checkFileStat(char *fname)
  * Return value: 0 - non-existant / not visible, 1 or more - exists
  *
  *****************************************************************************/
-int Java_com_kimchangyoun_rootbeer_RootBeerNative_checkForMagiskUDS( JNIEnv* env, jobject thiz )
+int Java_com_kimchangyoun_rootbeerFresh_RootBeerNative_checkForMagiskUDS( JNIEnv* env, jobject thiz )
 {
     int uds_detect_count = 0;
     int magisk_file_detect_count = 0;
@@ -295,7 +295,7 @@ int Java_com_kimchangyoun_rootbeer_RootBeerNative_checkForMagiskUDS( JNIEnv* env
  * Return value: int number of su binaries found
  *
  *****************************************************************************/
-int Java_com_kimchangyoun_rootbeer_RootBeerNative_checkForRoot( JNIEnv* env, jobject thiz, jobjectArray pathsArray ) {
+int Java_com_kimchangyoun_rootbeerFresh_RootBeerNative_checkForRoot( JNIEnv* env, jobject thiz, jobjectArray pathsArray ) {
 
     int binariesFound = 0;
 
