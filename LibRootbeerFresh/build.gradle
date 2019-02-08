@@ -6,9 +6,9 @@ apply plugin: 'com.jfrog.bintray'
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/outputs/aar/rootbeerlib-release.aar")
+            artifact("$buildDir/outputs/aar/LibRootbeerFresh-release.aar")
             groupId
-            artifactId 'example'
+            artifactId 'LibRootbeerFresh'
             version this.version
 
             pom.withXml {
@@ -123,8 +123,6 @@ android {
     packagingOptions {
         // In case there are both compiled .so files and provided .so files, pick the first (should be generated)
         pickFirst('lib/*/libtool-checker.so')
-    }
-    productFlavors {
     }
 }
 

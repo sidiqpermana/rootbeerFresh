@@ -22,7 +22,7 @@ jobs:
           command: ./gradlew test
 
       - store_artifacts:
-          path: rootbeerlib/build/reports/
+          path: LibRootbeerFresh/build/reports/
           destination: reports
 
       - store_test_results:
