@@ -1,3 +1,4 @@
+<img src="https://travis-ci.org/travis-ci/travis-web.svg?branch=master"><br/><br/>
 Enjoy the latest Magisk and MagiskHide Detection RootBeerFresh!!
 <br/><img src="./Magisk_UDS_Detect_UI.jpg" width="50%">
 
