@@ -1,13 +1,39 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
+
+publishing {
+    publications {
+        Production(MavenPublication) {
+            artifact("$buildDir/outputs/aar/rootbeerlib-release.aar")
+            groupId
+            artifactId 'example'
+            version this.version
+
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+
+                // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.implementation.allDependencies.each {
+                    // Ensure dependencies such as fileTree are not included in the pom.
+                    if (it.name != 'unspecified') {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+            }
+        }
+    }
+}
 
 rootProject.ext.set("packageName", 'rootbeerFresh.library')
 rootProject.ext.set("libVersionName", '1.0.0')
 
 buildscript {
     repositories {
-        mavenCentral()
         google()
         jcenter()
     }
@@ -28,26 +54,26 @@ bintray {
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
     key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
 
+    publications = ['Production']
     configurations = ['archives'] // When uploading configuration files
-
-    publish = true // [Default: false] Whether version should be auto published after an upload
+    override = true
 
     pkg {
-        repo = 'rootbeerfresh' // Repository name (Created in the repository Bintray site)
-        name = project.name // module name
-        userOrg = user // An optional organization name when the repo belongs to one of the user's orgs
+        repo = 'rootbeerFresh/rootbeerFresh' // Repository name (Created in the repository Bintray site)
+        name = 'rootbeerFresh-lib' // module name
         desc = 'rootbeerFresh library' // Optional
+        publish = true
         licenses = ['Apache-2.0']
-
         vcsUrl = 'https://github.com/KimChangYoun/rootbeerFresh.git'
         websiteUrl = 'https://github.com/KimChangYoun/rootbeerFresh'
         // issueTrackerUrl = '' // Optional
 
-        labels = ['aar', 'android', 'example'] // Optional
         publicDownloadNumbers = true
 
-        githubRepo = 'kimchangyoun/rootbeerFresh' // Optional Github repository
+        githubRepo = 'KimChangYoun/rootbeerFresh' // Optional Github repository
         githubReleaseNotesFile = 'changes.md' // Optional Github readme file
+
+        dryRun = true
 
         version {
             name = rootProject.ext.libVersionName // The name of your library project
@@ -107,7 +133,6 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:2.10.0'
 }
 
-// JCenter publish
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
@@ -122,3 +147,4 @@ task findConventions << {
 }
 
 apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+
