@@ -8,8 +8,8 @@ android {
         applicationId "com.kimchangyoun.rootbeerFresh.sample"
         minSdkVersion minSdkVer
         targetSdkVersion targetSdkVer
-        versionCode 9
-        versionName "0.9"
+        versionCode 10
+        versionName "0.10"
     }
 
     //check if the keystore details are defined in gradle.properties (this is so the key is not in github)

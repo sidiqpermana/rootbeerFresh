@@ -22,7 +22,7 @@ import uk.co.barbuzz.beerprogressview.BeerProgressView;
 public class MainActivity extends AppCompatActivity
         implements CheckRootTask.OnCheckRootFinishedListener {
 
-    private static final String GITHUB_LINK = "https://github.com/kimchangyoun/rootbeer";
+    private static final String GITHUB_LINK = "https://github.com/kimchangyoun/rootbeerFresh";
 
     private AlertDialog infoDialog;
     private BeerProgressView beerView;
