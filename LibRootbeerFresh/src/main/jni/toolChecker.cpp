@@ -275,6 +275,8 @@ int Java_com_kimchangyoun_rootbeerFresh_RootBeerNative_checkForMagiskUDS( JNIEnv
                 }
             }
         }
+
+        fclose(fh);
     }
 
     if(uds_detect_count == 0 || magisk_file_detect_count == 0) {
