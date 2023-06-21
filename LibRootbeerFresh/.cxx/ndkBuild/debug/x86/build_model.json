@@ -1,0 +1,130 @@
+{
+  "abi": "X86",
+  "abiPlatformVersion": 16,
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "cxxBuildFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/.cxx/ndkBuild/debug/x86",
+  "info": {
+    "abi": "X86",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
+  },
+  "originalCxxBuildFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/.cxx/ndkBuild/debug/x86",
+  "variant": {
+    "buildSystemArgumentList": [],
+    "buildTargetSet": [],
+    "implicitBuildTargetSet": [],
+    "cFlagsList": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "cppFlagsList": [],
+    "isDebuggableEnabled": true,
+    "module": {
+      "buildSystem": "NDK_BUILD",
+      "cmakeToolchainFile": "/Users/user/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
+      "cxxFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/.cxx",
+      "gradleModulePathName": ":LibRootbeerFresh",
+      "intermediatesFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/build/intermediates",
+      "makeFile": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/src/main/jni/Android.mk",
+      "moduleBuildFile": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/build.gradle",
+      "moduleRootFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh",
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkFolder": "/Users/user/Library/Android/sdk/ndk/21.3.6528147",
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "ndkMetaPlatforms": {
+        "min": 16,
+        "max": 30,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28,
+          "Q": 29,
+          "R": 30
+        }
+      },
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultStl": "SYSTEM",
+      "ndkVersion": "21.3.6528147",
+      "project": {
+        "compilerSettingsCacheFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/.cxx",
+        "cxxFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/.cxx",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isNativeCompilerSettingsCacheEnabled": false,
+        "rootBuildGradleFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh",
+        "sdkFolder": "/Users/user/Library/Android/sdk",
+        "isPrefabEnabled": false
+      },
+      "splitsAbiFilterSet": [],
+      "stlSharedObjectMap": {
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "/Users/user/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
+          "ARM64_V8A": "/Users/user/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
+          "X86": "/Users/user/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
+          "X86_64": "/Users/user/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "SYSTEM": {}
+      }
+    },
+    "objFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/build/intermediates/ndkBuild/debug/obj/local",
+    "variantName": "debug",
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "prefabDirectory": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/.cxx/ndkBuild/debug/prefab",
+    "prefabPackageDirectoryList": []
+  },
+  "prefabFolder": "/Users/user/Documents/PLAYGROUND/SECURITY/RootbeerFresh/rootbeerFresh/LibRootbeerFresh/.cxx/ndkBuild/debug/prefab/x86"
+}

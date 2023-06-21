@@ -244,15 +244,19 @@ int Java_com_kimchangyoun_rootbeerFresh_RootBeerNative_checkForMagiskUDS( JNIEnv
 
             magisk_file_detect_count += checkFileStat("/init.magisk.rc");
 
-            /*
-            /overlay/sbin/magisk
-            /data/adb/magisk/magisk.apk
-            /data/adb/magisk_debug.log
-            /data/adb/magisk_merge.img
-            /dev/.magisk.patch.done
-            /data/data/com.topjohnwu.magisk/install
-            /data/user_de/0/com.topjohnwu.magisk/install
-            */
+            magisk_file_detect_count += checkFileStat("/sbin/.magisk/");
+            magisk_file_detect_count += checkFileStat("/sbin/.core/mirror");
+            magisk_file_detect_count += checkFileStat("/sbin/.core/img");
+            magisk_file_detect_count += checkFileStat("/sbin/.core/db-0/magisk.db");
+            magisk_file_detect_count += checkFileStat("/proc/self/mounts");
+
+            magisk_file_detect_count += checkFileStat("/overlay/sbin/magisk");
+            magisk_file_detect_count += checkFileStat("/data/adb/magisk/magisk.apk");
+            magisk_file_detect_count += checkFileStat("/data/adb/magisk_debug.log");
+            magisk_file_detect_count += checkFileStat("/data/adb/magisk_merge.img");
+            magisk_file_detect_count += checkFileStat("/dev/.magisk.patch.done");
+            magisk_file_detect_count += checkFileStat("/data/data/com.topjohnwu.magisk/install");
+            magisk_file_detect_count += checkFileStat("/data/user_de/0/com.topjohnwu.magisk/install");
 
             // The name of the unix domain socket created by the daemon is prefixed with an @ symbol.
             char *ptr = strtok(filename, "@");

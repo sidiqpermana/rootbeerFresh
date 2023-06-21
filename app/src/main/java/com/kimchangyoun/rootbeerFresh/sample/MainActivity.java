@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity
         ImageView rootCheck11ImageView = findViewById(R.id.content_main_root_check_image_11);
         ImageView rootCheck12ImageView = findViewById(R.id.content_main_root_check_image_12);
         ImageView rootCheck13ImageView = findViewById(R.id.content_main_root_check_image_13);
+
         checkRootImageViewList = new ArrayList<>();
         checkRootImageViewList.add(rootCheck1ImageView);
         checkRootImageViewList.add(rootCheck2ImageView);
